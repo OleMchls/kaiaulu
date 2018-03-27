@@ -11,7 +11,22 @@ config :kaiaulu, KaiauluWeb.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: []
+  watchers: [
+    node: [
+      "node_modules/.bin/webpack-dev-server",
+      "--inline",
+      "--colors",
+      "--hot",
+      "--stdin",
+      "--host",
+      "localhost",
+      "--port",
+      "8080",
+      "--public",
+      "localhost:8080",
+      cd: Path.expand("../assets", __DIR__)
+    ]
+  ]
 
 # ## SSL Support
 #
