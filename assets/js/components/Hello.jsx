@@ -1,10 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
 // import socket from "./socket"
 
 class Hello extends Component {
-  render() {
-    return(
-      <div className="greeting">
+  render () {
+    return (
+      <div className='greeting'>
         <h1>Ahoy-hoy!</h1>
         <p>This a basic bare-bone setup for new Phoenix projects.</p>
         <hr />
@@ -15,10 +15,10 @@ class Hello extends Component {
         <p>Extend it, build new cool things with it &ndash; whatever the hell you want!</p>
         <hr />
         <h2> Who are you?</h2>
-        <p>This guy: <a href="https://twitter.com/designingcode">Letmecode</a></p>
+        <p>This guy: <a href='https://twitter.com/designingcode'>Letmecode</a></p>
       </div>
-    );
+    )
   }
 }
 
-export default Hello;
+export default Hello
