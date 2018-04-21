@@ -1,0 +1,10 @@
+<h2>Show Room</h2>
+
+<ul>
+
+  <li>
+    <strong>ID:</strong>
+    <%= @id %>
+  </li>
+
+</ul>
