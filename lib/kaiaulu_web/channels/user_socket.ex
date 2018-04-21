@@ -2,10 +2,10 @@ defmodule KaiauluWeb.UserSocket do
   use Phoenix.Socket
 
   ## Channels
-  # channel "room:*", KaiauluWeb.RoomChannel
+  channel("room:*", KaiauluWeb.RoomChannel)
 
   ## Transports
-  transport :websocket, Phoenix.Transports.WebSocket
+  transport(:websocket, Phoenix.Transports.WebSocket)
   # transport :longpoll, Phoenix.Transports.LongPoll
 
   # Socket params are passed from the client and can
