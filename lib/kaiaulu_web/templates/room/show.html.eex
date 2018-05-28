@@ -8,3 +8,50 @@
   </li>
 
 </ul>
+
+<div id="app"></div>
+
+<img />
+
+<!-- <script>
+var stream, imageCapture;
+
+function getMediaStream(cb)
+{
+    window.navigator.mediaDevices.getUserMedia({video: true})
+    .then(function(mediaStream)
+    {
+        stream = mediaStream;
+        let mediaStreamTrack = mediaStream.getVideoTracks()[0];
+        imageCapture = new ImageCapture(mediaStreamTrack);
+        console.log(imageCapture);
+        cb(imageCapture)
+    })
+    .catch(error);
+}
+
+function error(error)
+{
+    console.error('error:', error);
+}
+
+function takePhoto(imageCapture)
+{
+    const img = document.querySelector('img');
+
+    imageCapture.takePhoto()
+    .then(blob => {
+        let url = window.URL;
+        img.src = url.createObjectURL(blob);
+        url.revokeObjectURL(blob);
+    })
+    .catch(error);
+};
+
+/* just call */
+getMediaStream(takePhoto);
+
+/* and when you want to capture an image */
+
+
+</script> -->

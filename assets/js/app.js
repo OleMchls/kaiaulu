@@ -22,6 +22,6 @@
 
 import React from 'react'
 import { render } from 'react-dom'
-import Hello from './components/Hello'
+import PicChat from './components/PicChat'
 
-render(<Hello />, document.getElementById('app'))
+render(<PicChat />, document.getElementById('app'))
