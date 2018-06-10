@@ -10,40 +10,36 @@ class PicChat extends Component {
   }
 
   capture = () => {
-    this.state.channel.push('shout', {
+    this.channel.push('shout', {
       src: this.webcam.getScreenshot(),
-      clientId: this.state.clientId
+      clientId: this.clientId
     })
   }
 
   newImage = (resp) => {
-    this.state.images[resp.clientId] = resp.src
-    this.setState(this.state)
+    this.setState({images: {[resp.clientId]: resp.src}})
   }
 
   constructor(props) {
     super(props)
 
+    this.clientId = UUID.randomUUID().getId()
+    this.channel = null
     this.state = {
-      clientId: UUID.randomUUID().getId(),
-      channel: null,
       images: {}
     }
   }
 
   componentDidMount() {
     // Now that you are connected, you can join channels with a topic:
-    let channel = socket.channel('room:dnsimple', {})
-    channel.join()
+    this.channel = socket.channel('room:dnsimple', {})
+    this.channel.join()
       .receive('ok', resp => { console.log('Joined successfully', resp) })
       .receive('error', resp => { console.log('Unable to join', resp) })
 
-    channel.on("shout", this.newImage)
+    this.channel.on("shout", this.newImage)
 
     let intervalID = setInterval(this.capture, 10000)
-
-    this.state.channel = channel
-    this.setState(this.state)
   }
 
   render () {
