@@ -45,6 +45,7 @@ class PicChat extends Component {
     this.channel.on("shout", this.newImage)
 
     let intervalID = setInterval(this.capture, 10000)
+    this.capture()
   }
 
   render () {
