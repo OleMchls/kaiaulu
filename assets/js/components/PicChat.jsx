@@ -17,7 +17,12 @@ class PicChat extends Component {
   }
 
   newImage = (resp) => {
-    this.setState({images: {[resp.clientId]: resp.src}})
+    this.setState({
+      images: {
+        ...this.state.images,
+        [resp.clientId]: resp.src
+      }
+    })
   }
 
   constructor(props) {
