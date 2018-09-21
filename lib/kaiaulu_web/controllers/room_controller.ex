@@ -13,7 +13,7 @@ defmodule KaiauluWeb.RoomController do
     room = Live.create_room(room_params)
 
     conn
-    |> put_flash(:info, "Room created successfully.")
+    |> put_flash(:info, "Room created successfully. Share this URL with your team to start the smiles 💖")
     |> redirect(to: room_path(conn, :show, room))
   end
 

@@ -82,3 +82,19 @@ a:hover {
 .capture {
   visibility: hidden;
 }
+
+.alert {
+    -webkit-animation: fadeOut 2s forwards;
+    animation: fadeOut 2s forwards;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
+    background: white;
+    color: pink;
+    padding: 10px;
+    text-align: center;
+}
+
+@keyframes fadeOut {
+    from {opacity: 1;}
+    to {opacity: 0; padding: 0px; height: 0}
+}
