@@ -1,0 +1,37 @@
+<!-- Header -->
+  <header id="header">
+    <h1>Kaiāulu</h1>
+    <p>Kaiāulu makes the world smaller by connecting<br />
+     you with your team across the globe.</p>
+  </header>
+
+<!-- Signup Form -->
+  <%= form_for @changeset, room_path(@conn, :create), [id: "signup-form"], fn f -> %>
+    <%= if @changeset.action do %>
+      <div class="alert alert-danger">
+        <p>Oops, something went wrong! Please check the errors below.</p>
+      </div>
+    <% end %>
+
+      <%= text_input f, :name, id: "email", placeholder: "Company name" %>
+      <%= error_tag f, :name %>
+
+      <%= submit "Never miss a smile!", class: "form-submit" %>
+  <% end %>
+
+
+  <small style="color: rgba(255, 255, 255, 0.5)">Kaiāulu – name of a gentle trade-wind breeze famous in song at Waiʻanae, Oʻahu. ʻōlauniu – name of a wind on Hawaiʻi. A figurative translation means promiscuous, and a literal translation means coconut-leaf piercing.</small>
+
+<!-- Footer -->
+  <footer id="footer">
+    <ul class="icons">
+      <li><a href="https://twitter.com/olemchls" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+      <li><a href="https://github.com/OleMchls/kaiaulu" class="icon fa-github"><span class="label">GitHub</span></a></li>
+    </ul>
+    <ul class="copyright">
+      <li>&copy; Untitled.</li>
+      <li>Programming <a href="https://twitter.com/olemchls">@OleMchls</a></li>
+      <li>App Grid <a href="https://twitter.com/herrbertling">@HerrBertling</a></li>
+      <li>Landingpage <a href="http://html5up.net">HTML5 UP</a></li>
+    </ul>
+  </footer>

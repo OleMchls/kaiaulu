@@ -17,7 +17,7 @@ defmodule KaiauluWeb.Router do
     # Use the default browser stack
     pipe_through(:browser)
 
-    get("/", RoomController, :new)
+    get("/", PageController, :index)
     resources("/rooms", RoomController, only: [:show, :new, :create])
   end
 
