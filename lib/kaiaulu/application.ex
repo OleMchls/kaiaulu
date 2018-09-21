@@ -9,7 +9,7 @@ defmodule Kaiaulu.Application do
     # Define workers and child supervisors to be supervised
     children = [
       # Start the Ecto repository
-      supervisor(Kaiaulu.Repo, []),
+      # supervisor(Kaiaulu.Repo, []),
       # Start the endpoint when the application starts
       supervisor(KaiauluWeb.Endpoint, []),
       # Start your own worker by calling: Kaiaulu.Worker.start_link(arg1, arg2, arg3)

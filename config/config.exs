@@ -6,8 +6,8 @@
 use Mix.Config
 
 # General application configuration
-config :kaiaulu,
-  ecto_repos: [Kaiaulu.Repo]
+# config :kaiaulu,
+#   ecto_repos: []
 
 # Configures the endpoint
 config :kaiaulu, KaiauluWeb.Endpoint,
