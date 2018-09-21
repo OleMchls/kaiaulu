@@ -53,6 +53,18 @@ hr {
   color: $color-secondary-light;
 }
 
+.imageList {
+  display: grid;
+  grid-template-columns: repeat( auto-fit, minmax(200px, 1fr) );
+  grid-gap: 8px;
+  margin-bottom: 8px;
+}
+
+.imageList img {
+  max-width: 100%;
+  height: auto;
+}
+
 a {
   color: $color-white;
 }

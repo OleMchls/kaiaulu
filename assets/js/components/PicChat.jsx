@@ -51,9 +51,9 @@ class PicChat extends Component {
   render () {
     return (
       <div>
-        <ul>
+        <ul className="imageList">
         {Object.keys(this.state.images).map(key =>
-          <img key={key} src={this.state.images[key]}/>
+          <li className="imageWrapper" key={`${key}-1`}><img src={this.state.images[key]}/></li>
         )}
         </ul>
         <Webcam
