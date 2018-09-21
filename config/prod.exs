@@ -22,6 +22,15 @@ config :kaiaulu, KaiauluWeb.Endpoint,
 # Do not print debug messages in production
 config :logger, level: :info
 
+# unused but needs to stay here
+config :kaiaulu, Kaiaulu.Repo,
+  adapter: Ecto.Adapters.Postgres,
+  username: "postgres",
+  password: "postgres",
+  database: "kaiaulu_dev",
+  hostname: "localhost",
+  pool_size: 10
+
 # ## SSL Support
 #
 # To get SSL working, you will need to add the `https` key
