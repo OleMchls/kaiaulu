@@ -57,6 +57,7 @@ class PicChat extends Component {
         )}
         </ul>
         <Webcam
+          className="capture"
           ref={this.setRef}
           screenshotFormat='image/jpeg'
           audio={false}
