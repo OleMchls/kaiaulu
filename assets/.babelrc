@@ -2,7 +2,14 @@
   "presets": ["es2015", "es2016", "react"],
   "env": {
     "development": {
-      "presets": ["react-hmre"]
+      "presets": ["react-hmre"],
+      "plugins": [["react-transform", {
+        "transforms": [{
+          "transform": "react-transform-hmr",
+          "imports": ["react"],
+          "locals": ["module"]
+        }]
+      }]]
     }
   },
   "plugins": ["transform-class-properties", "transform-object-rest-spread"]
